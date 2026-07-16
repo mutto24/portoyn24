@@ -1,0 +1,289 @@
+:root {
+    --primary-color: #2c3e54; /* Warna biru gelap elegan */
+    --secondary-color: #20449D; /* Warna aksen navy */
+    --bg-color: #C3CFE9;
+    --text-color: #333;
+    --light-bg: #E1E7F4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigasi / Menu Atas */
+header {
+    background-color: var(--light-bg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Struktur Umum Bagian (Section) */
+section {
+    padding: 100px 20px 50px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+h2.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Bagian Hero (Beranda) */
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.hero-content h3 {
+    font-size: 24px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #d35400;
+}
+
+/* Gaya untuk Foto Profil */
+.profile-img {
+    width: 200px;           /* Mengatur lebar foto */
+    height: 200px;          /* Mengatur tinggi foto */
+    object-fit: cover;      /* Memastikan foto tidak gepeng / terdistorsi */
+    border-radius: 50%;     /* Membuat foto menjadi bulat sempurna */
+    border: 5px solid var(--secondary-color); /* Memberikan bingkai warna oranye */
+    margin-bottom: 20px;    /* Memberikan jarak antara foto dan nama */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Memberikan efek bayangan lembut */
+    transition: transform 0.3s ease; /* Efek transisi untuk animasi */
+}
+
+/* Efek zoom kecil saat foto disentuh cursor (opsional) */
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Pengalaman & Pendidikan */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    background: var(--light-bg);
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--secondary-color);
+}
+
+.timeline-item h4 {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.timeline-item .date {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.timeline-item ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.timeline-item ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+/* Keterampilan */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill-badge {
+    background-color: var(--light-bg);
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.skill-badge:hover {
+    transform: translateY(-5px);
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+/* Kontak */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: var(--light-bg);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.contact-item i {
+    font-size: 24px;
+    color: var(--secondary-color);
+}
+
+.contact-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: var(--secondary-color);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    margin-top: 50px;
+}
+
+/* Animasi muncul saat di-scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsif untuk Layar Smartphone */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 5px 10px;
+    }
+    .hero-content h1 {
+        font-size: 36px;
+    }
+}

@@ -257,6 +257,26 @@ footer {
     margin-top: 50px;
 }
 
+/* Pengaturan Kumpulan Tombol di Beranda */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Memberikan jarak antar tombol */
+    flex-wrap: wrap; /* Tombol akan turun ke bawah jika layar HP terlalu kecil */
+}
+
+/* Gaya untuk Tombol Garis Luar (Outline Button) untuk CV */
+.btn-outline {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
 /* Animasi muncul saat di-scroll */
 .fade-in {
     opacity: 0;
